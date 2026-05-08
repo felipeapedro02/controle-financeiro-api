@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.EnumType;
 
 @Entity
 public class Categoria {
@@ -14,7 +16,9 @@ public class Categoria {
 
     private String nome;
 
-    private String tipo;
+    @Enumerated(EnumType.STRING)
+    private TipoCategoria tipo;
+
     public Long getId() {
         return id;
     }
@@ -31,11 +35,11 @@ public class Categoria {
         this.nome = nome;
     }
 
-    public String getTipo() {
+    public TipoCategoria getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoCategoria tipo) {
         this.tipo = tipo;
     }
 }

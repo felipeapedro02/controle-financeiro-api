@@ -3,5 +3,11 @@ Content-Type: application/json
 
 {
   "nome": "Faculdade",
+  "tipo": "GASTO",
+
+  "nome": "Remédio",
   "tipo": "DESPESA"
+
+
 }
+
